@@ -8,9 +8,17 @@ def selection_sort( arr ):
         # TO-DO: find next smallest element
         # (hint, can do in 3 loc) 
         for n in range(i+1, len(arr)):
-            if arr[n] < arr[smallest_index]:
+        #     if arr[n] < arr[smallest_index]:
+        #         smallest_index = n
+        # arr[cur_index],arr[smallest_index]=arr[smallest_index],arr[cur_index]
+
+        #alternative solution
+            if arr[n] < arr[cur_index]:
                 smallest_index = n
-        arr[cur_index],arr[smallest_index]=arr[smallest_index],arr[cur_index]
+                temp = arr[cur_index]
+                arr[cur_index]=arr[smallest_index]
+                arr[smallest_index] = temp
+
 
 
 
